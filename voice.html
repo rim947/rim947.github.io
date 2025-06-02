@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 감성정원</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+
+        body {
+            font-family: '돋움';
+            font-size: 12px;
+            color:#444444;
+        }
+        ul {
+            list-style-type: none;
+        }
+        .clear {
+            clear:both;
+        }
+        #new h3{
+            padding-bottom: 5px;
+            border-bottom: solid 2px #9bc32a;
+        }
+        #new h3 span{
+            color:#80a727;
+        }
+        #new .item{
+            float:left;
+            margin-top:20px;
+            text-align: center;
+        }
+        #logo {
+            padding: 30px 0 0 30px;
+            float:left;
+        }
+        #top_menu {
+            margin: 40px 10px 0 0;
+            float:right;
+        }
+        #top_menu li {
+            display: inline;
+        }
+        #main_menu {
+            font-size: 15px;
+            color:#ffffff;
+            background-color: #225207;
+            margin-top:15px;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+        #main_menu li {
+            padding: 0 20px 0 20px;
+            display: inline;
+        }
+        #main_menu li a {
+            color: #ffffff;
+        }
+        a {
+            text-decoration: none;
+        }
+
+main {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="date"],
+form textarea,
+form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.radio-group label {
+  font-weight: normal;
+}
+
+button[type="submit"] {
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #9bc32a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #80a727;
+}
+    footer {
+      height: 100px;
+    }
+
+    @media (max-width: 768px) {
+      .intro-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .intro-section img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .text {
+        font-size: 15px;
+        padding-top: 10px;
+      }
+    }
+      footer {
+      color: #4b4b49;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .footer-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-column {
+      flex: 1 1 200px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 10px;
+      font-size: 1.1em;
+      color: #4b4b49;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 6px;
+    }
+
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #3b3b1f;
+    }
+
+
+    .newsletter input[type="email"] {
+      padding: 8px;
+      width: 70%;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .newsletter button {
+      padding: 8px 16px;
+      background-color: #8fbc8f;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .newsletter button:hover {
+      background-color: #7aa97a;
+    }
+
+    .footer-bottom {
+      /* border-top: 1px solid #ccc; */
+      padding-top: 20px;
+      font-size: 0.9em;
+      text-align: center;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+    }
+    .footer-top {
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+      font-size: 0.9em;
+      text-align: center;
+
+    }
+    /* 반응형 처리 */
+    @media screen and (max-width: 800px) {
+      #logo {
+        float: none;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      #top_menu {
+        float: none;
+        text-align: center;
+        margin: 10px 0;
+        font-size: 14px;
+      }
+
+      #main_menu {
+        font-size: 14px;
+        padding: 10px;
+        margin: 13px;
+      }
+
+      #main_menu li {
+        display: block;
+        padding: 8px 0;
+      }
+    }
+
+    </style>
+</head>
+<body>
+  <header>
+    <!-- 로고 -->
+    <div id="logo">
+      <a href="index.html"><img src="banner.jpg" width="220" alt="감성정원 로고"/></a>
+    </div>
+
+    <!-- 상단 로그인/회원 메뉴 -->
+    <ul id="top_menu">
+      <li>로그인 |</li>
+      <li>회원가입 |</li>
+      <li>마이페이지 |</li>
+      <li>이용안내 |</li>
+      <li>고객센터</li>
+    </ul>
+
+    <div class="clear"></div>
+
+    <!-- 메인 메뉴 -->
+    <ul id="main_menu">
+      <li><a href="introduce.html">정원소개</a></li>
+      <li><a href="plant.html">식물종류</a></li>
+      <li><a href="gallery.html">정원갤러리</a></li>
+      <li><a href="notice.html">정원알리미</a></li>
+      <li><a href="voice.html">정원의소리</a></li>
+    </ul>
+  </header>
+
+    <main>
+        <h1>고객의 소리</h1>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <label for="name">성명 *</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">이메일 *</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">연락처 *</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="visit-date">방문시기(구매시기) *</label>
+            <input type="date" id="visit-date" name="visit-date" required>
+
+            <label for="content">내용 *</label>
+            <textarea id="content" name="content" rows="5" required></textarea>
+
+            <label>답변희망여부 *</label>
+            <div class="radio-group">
+                <label><input type="radio" name="reply" value="yes" required> 예</label>
+                <label><input type="radio" name="reply" value="no"> 아니오</label>
+            </div>
+
+            <label for="file">사진첨부</label>
+            <input type="file" id="file" name="file" multiple>
+
+            <button type="submit">등록하기</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-top"></div>
+        <div class="footer-section">
+            <div class="footer-column">
+                <h4>회사 정보</h4>
+                <p>© 2025 감성정원. All rights reserved.</p>
+                <p>운영사: 감성정원 주식회사</p>
+                <p>사업자등록번호: 123-45-67890</p>
+                <p>대표: 김식물</p>
+                <p>서울특별시 식물구 정원로 123</p>
+                <p>이메일: info@garden.co.kr</p>
+                <p>고객센터: 1588-0000</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>빠른 링크</h4>
+                <ul>
+                    <li><a href="#">이용 안내</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">자주 묻는 질문</a></li>
+                    <li><a href="#">오시는 길</a></li>
+                    <li><a href="#">회원가입 / 로그인</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>SNS</h4>
+                <p>@감성정원_official</p>
+                <div class="social-icons">
+                    <a href="#"><img src="insta.png" alt="Instagram" /></a>
+                    <a href="#"><img src="youtube.png" alt="YouTube" /></a>
+                    <a href="#"><img src="blog.png" alt="Blog" /></a>
+                </div>
+            </div>
+
+            <div class="footer-column newsletter">
+                <h4>뉴스레터 구독</h4>
+                <p>감성정원의 소식을 받아보세요!</p>
+                <input type="email" placeholder="이메일을 입력하세요" />
+                <button>구독하기</button>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="#" style="margin-right: 10px;">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>감성정원 메뉴바</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: '돋움', sans-serif;
+      font-size: 12px;
+      color: #444;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    /* 로고 */
+    #logo {
+      padding: 30px 0 0 30px;
+      float: left;
+    }
+
+    /* 상단 메뉴 */
+    #top_menu {
+      margin: 40px 10px 0 0;
+      float: right;
+    }
+
+    #top_menu li {
+      display: inline;
+      margin-left: 5px;
+    }
+
+    /* 메인 메뉴 */
+    #main_menu {
+      font-size: 15px;
+      color: #ffffff;
+      background-color: #225207;
+      margin-top: 15px;
+      padding: 12px;
+      text-align: center;
+      font-weight: bold;
+      margin: 13px;
+    }
+
+    #main_menu li {
+      padding: 0 20px;
+      display: inline;
+    }
+
+    #main_menu li a {
+      color: #ffffff;
+    }
+
+    /* 반응형 처리 */
+    @media screen and (max-width: 800px) {
+      #logo {
+        float: none;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      #top_menu {
+        float: none;
+        text-align: center;
+        margin: 10px 0;
+        font-size: 14px;
+      }
+
+      #main_menu {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      #main_menu li {
+        display: block;
+        padding: 8px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- 로고 -->
+    <div id="logo">
+      <a href="index.html"><img src="banner.jpg" width="220" alt="감성정원 로고"/></a>
+    </div>
+
+    <!-- 상단 로그인/회원 메뉴 -->
+    <ul id="top_menu">
+      <li>로그인 |</li>
+      <li>회원가입 |</li>
+      <li>마이페이지 |</li>
+      <li>이용안내 |</li>
+      <li>고객센터</li>
+    </ul>
+
+    <div class="clear"></div>
+
+    <!-- 메인 메뉴 -->
+    <ul id="main_menu">
+      <li><a href="introduce.html">정원소개</a></li>
+      <li><a href="plant.html">식물종류</a></li>
+      <li><a href="gallery.html">정원갤러리</a></li>
+      <li><a href="notice.html">정원알리미</a></li>
+      <li><a href="voice.html">정원의소리</a></li>
+    </ul>
+  </header>
+
+</body>
+</html>

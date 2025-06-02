@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>감성정원 - 이끼 소개</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 14px;
+      color: #333;
+      padding: 20px;
+      background-color: #f5f9f2;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    #logo {
+      padding: 30px 0 0 30px;
+      float: left;
+    }
+
+    #top_menu {
+      margin: 40px 10px 0 0;
+      float: right;
+    }
+
+    #top_menu li {
+      display: inline;
+      margin-left: 10px;
+    }
+
+    #main_menu {
+      font-size: 15px;
+      color: #ffffff;
+      background-color: #225207;
+      margin-top: 15px;
+      padding: 12px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    #main_menu li {
+      padding: 0 20px;
+      display: inline;
+    }
+
+    #main_menu li a {
+      color: #ffffff;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .intro-section {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    .intro-section img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .text {
+      flex: 1;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    footer {
+      height: 100px;
+    }
+
+    @media (max-width: 768px) {
+      .intro-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .intro-section img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .text {
+        font-size: 15px;
+        padding-top: 10px;
+      }
+    }
+        footer {
+      height: 100px;
+    }
+
+    @media (max-width: 768px) {
+      .intro-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .intro-section img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .text {
+        font-size: 15px;
+        padding-top: 10px;
+      }
+    }
+      footer {
+      color: #4b4b49;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .footer-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-column {
+      flex: 1 1 200px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 10px;
+      font-size: 1.1em;
+      color: #4b4b49;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 6px;
+    }
+
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #3b3b1f;
+    }
+
+
+    .newsletter input[type="email"] {
+      padding: 8px;
+      width: 70%;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .newsletter button {
+      padding: 8px 16px;
+      background-color: #8fbc8f;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .newsletter button:hover {
+      background-color: #7aa97a;
+    }
+
+    .footer-bottom {
+      /* border-top: 1px solid #ccc; */
+      padding-top: 20px;
+      font-size: 0.9em;
+      text-align: center;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+    }
+    .footer-top {
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+      font-size: 0.9em;
+      text-align: center;
+
+    }
+@media screen and (max-width: 800px) {
+  #logo {
+    float: none;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  #top_menu {
+    float: none;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 14px;
+  }
+
+  #main_menu {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #main_menu li {
+    display: block;
+    padding: 8px 0;
+  }
+
+  .info-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  footer {
+    padding: 20px 10px;
+  }
+
+  .footer-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .newsletter input[type="email"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .newsletter button {
+    width: 100%;
+  }
+}
+
+    @media screen and (max-width: 400px) {
+      body {
+        font-size: 11px;
+        padding: 10px;
+      }
+
+      #main_menu {
+        font-size: 13px;
+      }
+
+      .box h3 {
+        font-size: 14px;
+      }
+
+      .footer-column h4 {
+        font-size: 1em;
+      }
+
+      .footer-bottom {
+        font-size: 0.8em;
+      }
+
+      .social-icons img {
+        width: 20px;
+        height: 20px;
+      }
+    }    
+
+  </style>
+</head>
+<body>
+
+  <div id="logo">
+    <a href="index.html"><img src="banner.jpg" width="220" alt="감성정원 로고"/></a>
+  </div>
+
+  <ul id="top_menu">
+    <li><a href="#">로그인</a> |</li>
+    <li><a href="#">회원가입</a> |</li>
+    <li><a href="#">마이페이지</a> |</li>
+    <li><a href="#">이용안내</a> |</li>
+    <li><a href="#">고객센터</a></li>
+  </ul>
+
+  <div class="clear"></div>
+
+  <ul id="main_menu">
+    <li><a href="introduce.html">정원소개</a></li>
+    <li><a href="plant.html">식물종류</a></li>
+    <li><a href="gallery.html">정원갤러리</a></li>
+    <li><a href="notice.html">정원알리미</a></li>
+    <li><a href="voice.html">정원의소리</a></li>
+  </ul>
+
+  <main>
+    <section class="intro-section">
+      <img src="gutsi.png" alt="이끼 이미지">
+      <p class="text">
+            <strong>겉씨식물</strong>은 중생대 시대에 무성했던 목본 식물들로서, 꽃은 모두 암꽃, 수꽃으로 구별되는
+ 단성화이고 꽃잎과 꽃받침이 없으며 풍매화이다. 종자식물(種子植物) 중 씨에 보호기관이 없는
+ 식물로서 나자식물(裸子植物)이라고도 하며, 속씨식물에 상대되는 분류군이다. 목질부는 헛물관으로 
+되어 있으며 체관부에서는 반세포를 볼 수 없다. 잎은 대형의 겹잎에서부터 소형의 바늘 모양잎, 비늘조각잎
+ 등 여러 종류이다. 꽃은 단성(單性)이고, 화분주머니와 밑씨가 각각 결합하여 수꽃과 암꽃을 만들며 보통
+ 꽃덮이는 없다. 둥근 열매를 맺는 소나무·잣나무류는 밑씨가 단단한 포린(苞鱗)으로 덮여 있어 꽃덮이처럼
+ 보이지만, 이 포린은 가지와 상동기관으로 잎과 상동인 속씨식물의 꽃덮이와는 분명히 다르다. 밑씨(胚珠)는 심피(心皮)에 싸여 있지 않고 노출되어 있으며, 보통 1장의 주피(珠皮)에 싸인 주심(珠心)으로 이루어진다. 
+주심에서 분화한 배낭모세포가 감수분열하여 배낭세포를 만들고, 다시 체세포 분열을 되풀이하여 많은 양의 전분을 저장한 다세포배낭이 된다. 이것은 속씨식물의 배젖[胚乳]에 해당하는 부분이며 수정 전에 형성되는
+ 것이 겉씨식물 특유의 현상이다. 화분은 바람에 의해 수분(受粉)되면 밑씨 속의 주피와 주심 사이에 있는 화분실로 들어가서 수정할 때까지 몇 달 동안 여기에 머무르며 정자와 정세포(精細胞)를 만든다. 
+밑씨 속에서 배젖 형성이 끝나면 수정이 이루어진다
+
+
+
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+
+    </div>
+    <div class="footer-section">
+      <div class="footer-column">
+        <h4>회사 정보</h4>
+        <p>© 2025 감성정원. All rights reserved.</p>
+        <p>운영사: 감성정원 주식회사</p>
+        <p>사업자등록번호: 123-45-67890</p>
+        <p>대표: 김식물</p>
+        <p>서울특별시 식물구 정원로 123</p>
+        <p>이메일: info@garden.co.kr</p>
+        <p>고객센터: 1588-0000</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>빠른 링크</h4>
+        <ul>
+          <li><a href="#">이용 안내</a></li>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">자주 묻는 질문</a></li>
+          <li><a href="#">오시는 길</a></li>
+          <li><a href="#">회원가입 / 로그인</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>SNS</h4>
+        <p>@감성정원_official</p>
+        <div class="social-icons">
+          <a href="#"><img src="insta.png" alt="Instagram" /></a>
+          <a href="#"><img src="youtube.png" alt="YouTube" /></a>
+          <a href="#"><img src="blog.png" alt="Blog" /></a>
+        </div>
+      </div>
+
+      <div class="footer-column newsletter">
+        <h4>뉴스레터 구독</h4>
+        <p>감성정원의 소식을 받아보세요!</p>
+        <input type="email" placeholder="이메일을 입력하세요" />
+        <button>구독하기</button>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <a href="#" style=" margin-right: 10px;">이용약관</a>
+      <a href="#" >개인정보처리방침</a>
+    </div>
+  </footer>
+</body>
+</html>

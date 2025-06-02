@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>감성정원 - 속씨식물의 쓰임새</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nanum Gothic', sans-serif;
+      background-color: #f5f9f2;
+      color: #333;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #225207;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card h2 {
+      color: #4c7c1c;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    li {
+      line-height: 1.8;
+    }
+
+    .card p {
+      margin-bottom: 10px;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    #logo {
+      padding: 30px 0 0 30px;
+      float: left;
+    }
+
+    #top_menu {
+      margin: 40px 10px 0 0;
+      float: right;
+    }
+
+    #top_menu li {
+      display: inline;
+    }
+
+    #main_menu {
+      font-size: 15px;
+      color: #ffffff;
+      background-color: #225207;
+      margin-top: 15px;
+      padding: 12px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    #main_menu li {
+      padding: 0 20px;
+      display: inline;
+    }
+
+    #main_menu li a {
+      color: #ffffff;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+    }
+
+    footer {
+      height: 100px;
+    }
+        footer {
+      height: 100px;
+    }
+
+    @media (max-width: 768px) {
+      .intro-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .intro-section img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .text {
+        font-size: 15px;
+        padding-top: 10px;
+      }
+    }
+      footer {
+      color: #4b4b49;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .footer-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-column {
+      flex: 1 1 200px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 10px;
+      font-size: 1.1em;
+      color: #4b4b49;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 6px;
+    }
+
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #3b3b1f;
+    }
+
+
+    .newsletter input[type="email"] {
+      padding: 8px;
+      width: 70%;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .newsletter button {
+      padding: 8px 16px;
+      background-color: #8fbc8f;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .newsletter button:hover {
+      background-color: #7aa97a;
+    }
+
+    .footer-bottom {
+      /* border-top: 1px solid #ccc; */
+      padding-top: 20px;
+      font-size: 0.9em;
+      text-align: center;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+    }
+    .footer-top {
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+      font-size: 0.9em;
+      text-align: center;
+
+    }
+@media screen and (max-width: 800px) {
+  #logo {
+    float: none;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  #top_menu {
+    float: none;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 14px;
+  }
+
+  #main_menu {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #main_menu li {
+    display: block;
+    padding: 8px 0;
+  }
+
+  .info-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  footer {
+    padding: 20px 10px;
+  }
+
+  .footer-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .newsletter input[type="email"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .newsletter button {
+    width: 100%;
+  }
+}
+
+    @media screen and (max-width: 400px) {
+      body {
+        font-size: 11px;
+        padding: 10px;
+      }
+
+      #main_menu {
+        font-size: 13px;
+      }
+
+      .box h3 {
+        font-size: 14px;
+      }
+
+      .footer-column h4 {
+        font-size: 1em;
+      }
+
+      .footer-bottom {
+        font-size: 0.8em;
+      }
+
+      .social-icons img {
+        width: 20px;
+        height: 20px;
+      }
+    }    
+
+  </style>
+</head>
+<body>
+
+  <div id="logo">
+    <a href="index.html"><img src="banner.jpg" width="220" alt="로고" /></a>
+  </div>
+
+  <ul id="top_menu">
+    <li>로그인 |</li>
+    <li>회원가입 |</li>
+    <li>마이페이지 |</li>
+    <li>이용안내 |</li>
+    <li>고객센터</li>
+  </ul>
+
+  <div class="clear"></div>
+
+  <ul id="main_menu">
+    <li><a href="introduce.html">정원소개</a></li>
+    <li><a href="plant.html">식물종류</a></li>
+    <li><a href="gallery.html">정원갤러리</a></li>
+    <li><a href="notice.html">정원알리미</a></li>
+    <li><a href="voice.html">정원의소리</a></li>
+  </ul>
+
+  <main>
+    <section>
+      <h1>속씨식물의 쓰임새</h1>
+
+      <div class="card">
+        <p>속씨식물은 인간에게 가장 중요한 식량 공급원일 뿐만 아니라 의약품, 섬유, 목재, 관상용 식물 등 다양한 상업적 제품의 원료로 활용됩니다. 특히, 속씨식물이 생성하는 열매는 사람의 식량 공급에 큰 영향을 미치고 있습니다.</p>
+      </div>
+
+      <div class="card">
+        <h2>1. 식량 공급원</h2>
+        <ul>
+          <li>곡식, 과일, 채소 등 다양한 식량 재료 제공</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>2. 의약품</h2>
+        <ul>
+          <li>다양한 식물성 약재 생산의 중요한 원료</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>3. 섬유</h2>
+        <ul>
+          <li>면, 아마, 삼베 등 섬유 생산에 활용</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>4. 목재</h2>
+        <ul>
+          <li>활엽수, 특히 속씨식물은 건축재, 가구, 제지 등의 목재로 사용</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>5. 관상용 식물</h2>
+        <ul>
+          <li>아름다운 꽃과 잎을 가진 식물은 관상용으로 활용</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>6. 기타 상업 제품</h2>
+        <ul>
+          <li>향료, 화장품, 오일 등 다양한 제품의 원료로 사용</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>7. 생태계 유지</h2>
+        <ul>
+          <li>생태계의 기초를 이루며, 인간을 포함한 다양한 생물에게 서식지 및 식량 공급원 제공</li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+
+    </div>
+    <div class="footer-section">
+      <div class="footer-column">
+        <h4>회사 정보</h4>
+        <p>© 2025 감성정원. All rights reserved.</p>
+        <p>운영사: 감성정원 주식회사</p>
+        <p>사업자등록번호: 123-45-67890</p>
+        <p>대표: 김식물</p>
+        <p>서울특별시 식물구 정원로 123</p>
+        <p>이메일: info@garden.co.kr</p>
+        <p>고객센터: 1588-0000</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>빠른 링크</h4>
+        <ul>
+          <li><a href="#">이용 안내</a></li>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">자주 묻는 질문</a></li>
+          <li><a href="#">오시는 길</a></li>
+          <li><a href="#">회원가입 / 로그인</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>SNS</h4>
+        <p>@감성정원_official</p>
+        <div class="social-icons">
+          <a href="#"><img src="insta.png" alt="Instagram" /></a>
+          <a href="#"><img src="youtube.png" alt="YouTube" /></a>
+          <a href="#"><img src="blog.png" alt="Blog" /></a>
+        </div>
+      </div>
+
+      <div class="footer-column newsletter">
+        <h4>뉴스레터 구독</h4>
+        <p>감성정원의 소식을 받아보세요!</p>
+        <input type="email" placeholder="이메일을 입력하세요" />
+        <button>구독하기</button>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <a href="#" style=" margin-right: 10px;">이용약관</a>
+      <a href="#" >개인정보처리방침</a>
+    </div>
+  </footer>
+</body>
+</html>

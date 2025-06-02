@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>정원 갤러리</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: '돋움', sans-serif;
+    font-size: 13px;
+    color: #444;
+    background-color: #fff;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  #logo {
+    padding: 30px 0 0 30px;
+    float: left;
+  }
+
+  #top_menu {
+    margin: 40px 10px 0 0;
+    float: right;
+  }
+
+  #top_menu li {
+    display: inline;
+    margin-left: 5px;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  #main_menu {
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #225207;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  #main_menu li {
+    display: inline;
+    margin: 0 20px;
+  }
+
+  #main_menu li a {
+    color: #fff;
+  }
+
+  .container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 15px;
+    gap: 20px;
+  }
+
+  #left {
+    width: 200px;
+    background-color: #85a774;
+    padding: 20px;
+    flex-shrink: 0;
+  }
+
+  #left h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  #left li {
+    margin: 6px 0;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  #right {
+    flex-grow: 1;
+    background-color: #265313;
+    padding: 20px;
+    color: #fff;
+  }
+
+  #main_title {
+    font-size: 18px;
+    font-weight: bold;
+    border: 5px solid #444;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  #main_img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border: 2px solid #333;
+  }
+
+  #thumnail {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  #photos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  #photos img {
+    width: 40px;
+    border: 5px solid #3d3d3d;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  #photos img:hover {
+    border-color: #fff;
+  }
+
+  footer {
+    background-color: #f1f1f1;
+    color: #4b4b49;
+    padding: 40px 20px;
+    margin-top: 40px;
+  }
+
+  .footer-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 30px;
+  }
+
+  .footer-column {
+    flex: 1 1 200px;
+  }
+
+  .footer-column h4 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 6px;
+  }
+
+  .newsletter input[type="email"] {
+    padding: 8px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+
+  .newsletter button {
+    padding: 8px 16px;
+    background-color: #8fbc8f;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .newsletter button:hover {
+    background-color: #7aa97a;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+  }
+
+  /* 반응형 스타일 */
+  @media screen and (max-width: 900px) {
+    .container {
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    #left {
+      width: 100%;
+      order: 1;
+    }
+
+    #right {
+      order: 2;
+    }
+
+    #thumnail {
+      flex-direction: column;
+    }
+
+    #photos {
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    #logo, #top_menu {
+      float: none;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    #top_menu {
+      font-size: 14px;
+    }
+
+    #main_menu li {
+      display: block;
+      margin: 8px 0;
+    }
+
+    #main_menu {
+      font-size: 14px;
+      padding: 10px 0;
+      margin: 13px;
+    }
+
+    .footer-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .newsletter input[type="email"] {
+      width: 90%;
+      margin-bottom: 10px;
+    }
+
+    .newsletter button {
+      width: 90%;
+    }
+
+    .social-icons {
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    body {
+      font-size: 11px;
+      padding: 10px;
+    }
+
+    #main_title {
+      font-size: 16px;
+    }
+
+    .footer-column h4 {
+      font-size: 1em;
+    }
+
+    .footer-bottom {
+      font-size: 0.8em;
+    }
+
+    .social-icons img {
+      width: 20px;
+      height: 20px;
+    }
+
+    #photos img {
+      width: 35px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <!-- 로고 -->
+    <div id="logo">
+      <a href="index.html"><img src="banner.jpg" width="220" alt="감성정원 로고"/></a>
+    </div>
+
+    <!-- 상단 로그인/회원 메뉴 -->
+    <ul id="top_menu">
+      <li>로그인 |</li>
+      <li>회원가입 |</li>
+      <li>마이페이지 |</li>
+      <li>이용안내 |</li>
+      <li>고객센터</li>
+    </ul>
+
+    <div class="clear"></div>
+
+    <!-- 메인 메뉴 -->
+    <ul id="main_menu">
+      <li><a href="introduce.html">정원소개</a></li>
+      <li><a href="plant.html">식물종류</a></li>
+      <li><a href="gallery.html">정원갤러리</a></li>
+      <li><a href="notice.html">정원알리미</a></li>
+      <li><a href="voice.html">정원의소리</a></li>
+    </ul>
+  </header>
+
+  <!-- Main Content -->
+   <main>
+  <div class="container">
+    <!-- Sidebar -->
+    <div id="left">
+      <h2>포토갤러리</h2>
+      <ul>
+        <li>+ 이끼</li>
+        <li>+ 양치</li>
+        <li>+ 겉씨</li>
+        <li>+ 속씨</li>
+      </ul>
+    </div>
+
+    <!-- Gallery -->
+    <div id="right">
+      <div id="main_title">정원 사진</div>
+      <img id="main_img" src="g3.jpg" alt="정원 이미지">
+
+      <div id="thumnail">
+        <img src="left.jpg" width="30" alt="이전">
+        <ul id="photos">
+          <li><a href="gallery.html"><img src="gallery1.jpg" alt="1"></a></li>
+          <li><a href="gallery2.html"><img src="g2.jpg" alt="2"></a></li>
+          <li><a href="gallery3.html"><img src="g3.jpg" alt="3"></a></li>
+          <li><a href="gallery4.html"><img src="g4.jpg" alt="4"></a></li>
+          <li><a href="gallery5.html"><img src="g5.jpg" alt="5"></a></li>
+        </ul>
+        <img src="right.jpg" width="30" alt="다음">
+      </div>
+    </div>
+  </div>
+</main>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-section">
+      <div class="footer-column">
+        <h4>회사 정보</h4>
+        <p>© 2025 감성정원. All rights reserved.</p>
+        <p>운영사: 감성정원 주식회사</p>
+        <p>사업자등록번호: 123-45-67890</p>
+        <p>대표: 김식물</p>
+        <p>서울특별시 식물구 정원로 123</p>
+        <p>이메일: info@garden.co.kr</p>
+        <p>고객센터: 1588-0000</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>빠른 링크</h4>
+        <ul>
+          <li><a href="#">이용 안내</a></li>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">자주 묻는 질문</a></li>
+          <li><a href="#">오시는 길</a></li>
+          <li><a href="#">회원가입 / 로그인</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>SNS</h4>
+        <p>@감성정원_official</p>
+        <div class="social-icons">
+          <a href="#"><img src="insta.png" alt="Instagram" /></a>
+          <a href="#"><img src="youtube.png" alt="YouTube" /></a>
+          <a href="#"><img src="blog.png" alt="Blog" /></a>
+        </div>
+      </div>
+
+      <div class="footer-column newsletter">
+        <h4>뉴스레터 구독</h4>
+        <p>감성정원의 소식을 받아보세요!</p>
+        <input type="email" placeholder="이메일을 입력하세요" />
+        <button>구독하기</button>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <a href="#">이용약관</a> | <a href="#">개인정보처리방침</a>
+    </div>
+  </footer>
+</body>
+</html>
